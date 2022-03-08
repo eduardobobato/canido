@@ -1,0 +1,19 @@
+type Query {
+	findAllUsers: [User]
+}
+
+type Mutation {
+	saveUser(user: UserInput): User
+}
+
+type User {
+	id: ID!,
+	name: String,
+	password: String
+}
+
+input UserInput {
+	name: String,
+	password: String,
+	confirmPassword: String
+}
